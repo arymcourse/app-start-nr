@@ -8,9 +8,9 @@
 <body>
     <header>
         <img src="/src/images/logo.svg" alt="logo" height="30">
-        <nav class="menu"> <!-- Меню -->
+        <nav class="menu" role="navigation"> <!-- Меню -->  <!-- Приклад використання role -->
             <ul>
-                <li><a href="task_3.html">Task 3</a></li>
+                <li><a href="task_3.html" arial-label="Go to task 3 page">Task 3</a></li> <!-- Приклад використання arial-label -->
                 <li><a href="task_2.html">Task 2</a></li>
                 <li><a href="task_1.html">Task 1</a></li>
             </ul>
@@ -18,7 +18,7 @@
     </header>
 <main>
     <ul class="breadcrumbs"> <!-- Крихти -->
-        <li><a href="#">Home</a></li>
+        <li><a href="#" arial-label="Go home">Home</a></li>
         <li>Catalogue</li>
 
     </ul>
@@ -38,7 +38,7 @@
         </figure>
         <figure> <!-- Товар 2 -->
             <img src="/src/images/Item.svg" alt="Item" height="50">
-            <ul>
+            <ul >
                 <li>Item name 2</li>
                 <li>Price</li>
                 <li>Details</li>
@@ -50,15 +50,15 @@
         <figure>
             <img src="/src/images/banner.svg" alt="Item" height="50">
             <figcaption>New season items</figcaption>
-            <a href="url">Get your discount</a>
+            <a href="url" arial-label="Get your discount">Get your discount</a>
         </figure>
     </aside>
     <footer>
         <nav class="menu"> <!-- Меню -->
             <ul>
-                <li><a href="task_3.html">Task 3</a></li>
-                <li><a href="task_2.html">Task 2</a></li>
-                <li><a href="task_1.html">Task 1</a></li>
+                <li><a href="task_3.html" arial-label="Go to task 3 page" tabindex="1">Task 3</a></li> <!-- Приклад використання tabindex -->
+                <li><a href="task_2.html" arial-label="Go to task 2 page">Task 2</a></li>
+                <li><a href="task_1.html" arial-label="Go to task 1 page">Task 1</a></li>
             </ul>
           </nav>
         <p>LOGO ©2024. All rights reserved.</p>
