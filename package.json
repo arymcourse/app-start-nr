@@ -4,7 +4,9 @@
   "description": "Test project",
   "main": "index.js",
   "scripts": {
-    "start:dev": "parcel task_1.html"
+    "start:dev": "parcel task_FullScreen_API.html",
+    "start:video": "parcel task_Video.html ",
+    "start:localStorage": "parcel task_LocalStorage.html"
   },
   "author": "",
   "license": "ISC",
