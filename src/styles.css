@@ -1,0 +1,672 @@
+body {
+    margin: 0;
+}
+
+/*
+.header {
+    width: 100%;
+    height: 120px;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+header .logo {
+    height: 40px;
+    float: left;
+}
+
+.navigation {
+    float: right;
+}
+
+.navigation .list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation .list li{
+    float: left;
+    padding: 0 15px;
+}
+*/ 
+
+.header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 40px;
+    background-color: #3ebfff;
+    box-sizing: border-box;
+}
+
+
+.menuBurger {
+    display: none;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+/*Welcome*/
+
+.logo {
+    height: 35px;
+}
+
+.navigation {
+    margin-left: auto;
+    margin-right: 45px;
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    column-gap: 45px;
+}
+
+.navListItem {
+    cursor: pointer;
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 16px;
+    color: #fff;
+}
+
+.navListItem a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.contactButton {
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none;
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 16px;
+    color: #0d2149;
+    background: #fff;
+}
+
+.firstScreenBackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.firstScreen {
+    position: relative;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: -110px;
+    padding-top: 110px;
+} 
+
+.title {
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 112px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 22px;
+    margin-top: 170px;
+    padding: 0 16px;
+}
+
+.arrowImage {
+    height: 125px;
+}
+
+/*About Us*/
+
+.secondScreen {
+    display: flex;
+    align-items: stretch;
+}
+
+.secondScreenTextContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    background: #fffcf6;
+    padding: 200px; 
+}
+
+.secondScreenImageContent {
+    width: 50%;
+    object-fit: cover;
+}
+
+.titleSecondScreen {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 56px;
+    color: #0d2149;
+    margin: 0 0 20px 0;
+}
+
+.textSecondScreen {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    color: #848c9b;
+    line-height: 28px;
+    margin: 0 0 30px 0;
+}
+
+.link {
+    width: fit-content;
+    font-family: Fraunces;
+    font-weight: 800;
+    font-size: 16px;
+    color: #0d2149;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+}
+
+.link span {
+    position: relative;
+    z-index: 1;
+}
+
+.link::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    bottom: -3px;
+    width: calc(100% + 10px);
+    height: 10px;
+    border-radius: 5px;
+    background: #fed700;
+    opacity: .3;
+
+}
+
+.linkPink::before {
+    background: #fd7867;
+}
+
+/*About Us 2*/
+
+.thirdScreen {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+}
+
+.thirdScreenTextContent {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    background: #fffcf6;
+    padding: 200px;  
+}
+
+.thirdScreenImageContent {
+    width: 100%;
+    object-fit: cover;
+}
+
+.titleThirdScreen {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 56px;
+    color: #0d2149;
+    margin: 0 0 30px 0;
+}
+
+.textThirdScreen {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    color: #848c9b;
+    line-height: 28px;
+    margin: 0 0 20px 0;
+}
+
+/*Services Positions*/
+
+.fourthScreen {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.firstSide {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.secondSide {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.firstSideTextContent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 415px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 20px 120px;
+}
+
+.secondSideTextContent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 415px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 20px 120px;
+}
+
+
+/*Services Styles*/
+
+.titleFirstFourthScreen {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 36px;
+    color: #19564a;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.textFirstFourthScreen {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    color: #19564a;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+.titleSecondFourthScreen {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 36px;
+    color: #034b68;
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.textSecondFourthScreen {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    color: #034b68;
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+/*Testimonials Position*/
+
+.titleFifthScreen {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 140px 0;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    column-gap: 170px;
+}
+
+.reviewBody {
+    max-width: 360px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonials { 
+    padding: 220px;
+    background: #fffbf8;
+}
+
+/*Testimonials Styles*/
+
+.titleFifthScreen {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 30px;
+    color: #a9a9a9;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+.clientPortrait {
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+    margin: 0 0 30px 0;
+}
+
+.reviewText {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    color: #4e4e4e;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+.clientName {
+    font-family: Fraunces;
+    font-weight: 700;
+    font-size: 20px;
+    color: #0d2149;
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.clientPosition {
+    font-family: Barlow;
+    font-weight: 500;
+    font-size: 18px;
+    color: #686868;
+    line-height: 28px;
+    text-align: center
+}
+
+/*Gallery Position*/
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+}
+
+.galleryImage {
+    width: 25%;
+}
+
+/*Footer Position*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px;
+    }
+
+.footerNavList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    column-gap: 80px;
+    padding: 0;
+}
+
+.footerNavListItem a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.footerSocial {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    column-gap: 30px;
+    padding: 30px;
+}
+
+/*Footer Style*/
+
+.footer {
+    background: #90d4c5;
+}
+
+.footerLogo {
+    height: 40px;
+    padding: 30px;
+}
+
+.footerNavListItem {
+    cursor: pointer;
+    font-family: Barlow;
+    font-weight: 600;
+    font-size: 18px;
+    color: #2b7463;
+    padding: 30px;
+}   
+
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 44px;
+        text-align: center;
+        letter-spacing: 8px;
+        margin-top: 100px;
+    }
+
+    .arrowImage {
+        height: 120px;
+    }
+
+    .firstScreen {
+        max-height: 650px;
+    } 
+
+    .navigation {
+        display: none;
+    }
+
+    .contactButton {
+        display: none;
+    }
+
+    .menuBurger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .secondScreen {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .secondScreenImageContent {
+        width: 100%;
+    }
+
+    .titleSecondScreen {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .secondScreenTextContent {
+        width: 100%;
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textSecondScreen {
+        text-align: center;
+    }
+
+    .thirdScreen {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .titleThirdScreen {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .thirdScreenTextContent {
+        width: 100%;
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thirdScreenImageContent {
+        width: 100%;
+        height: 630px;
+    }
+
+    .fourthScreen {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .firstSide, .secondSide {
+        width: 100%;
+    }
+
+    .titleFirstFourthScreen, .titleSecondFourthScreen {
+        font-size: 30px;
+    }
+
+    .firstSideTextContent, .secondSideTextContent {
+        z-index: 1;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 415px;
+        padding: 0 50px 90px;
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .testimonials {
+        padding: 100px 20px 100px 20px;
+    }
+
+    .titleFifthScreen {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .reviewText {
+        margin: 0 0 20px;
+    }
+
+    .reviewBody {
+        margin-bottom: 60px;
+    }
+
+    .gallery {
+        flex-wrap: wrap;
+    }
+
+    .galleryImage {
+        width: 50%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .footer {
+        padding: 50px 20px 50 20px;
+    }
+
+    .footerNavList {    
+        column-gap: 15px;
+    }
+
+    .mobileMenu {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        display: none;
+        z-index: 15;
+    }
+
+    .mobileMenu.openMenu {
+        display: block;
+    }
+    
+
+    .mobileMenu .navigation {
+        display: block;
+    }
+    
+    .navigation {
+        margin: 0;
+        padding: 20px;
+    }
+
+    .navList {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navListItem {
+        color: #034b68;
+        font-size: 32px;
+        font-weight: 600;
+        padding: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+
+    .headerOpenMenu {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 30px 40px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }   
+
+    .menuBurgerClose {
+        width: 26px;
+    }
+
+}
+

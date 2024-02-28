@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunnyside</title>
+    <!-- Load fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="./src/styles.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="src/images/favicon-32x32.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- Scripts -->
+    <script src="./src/task_10.js"></script>
+</head>
+<body>
+    <header class="header">
+        <img src="/src/images/logo.svg" class="logo" alt="logo">
+        <nav class="navigation" role="navigation">
+            <ul class="navList">
+                <li class="navListItem"><a href="#">About </a></li>  
+                <li class="navListItem"><a href="#">Services</a></li>
+                <li class="navListItem"><a href="#">Projects</a></li>
+            </ul>
+        </nav> 
+        <button type="button" class="contactButton">CONTACT</button>
+        <img src="src/images/menu.png" alt="menuBurger" class="menuBurger" onclick="toggleMenu()">
+        <div class="mobileMenu" id="mobileMenu">
+            <div class="headerOpenMenu">
+                <img src="/src/images/logoMenu.svg" class="logo" alt="logo">
+                <img src="src/images/close.png" alt="menuBurgerClose" class="menuBurgerClose" onclick="toggleMenu()">
+            </div>
+            <nav class="navigation" role="navigation">
+                <ul class="navList">
+                    <li class="navListItem"><a href="#">About </a></li>  
+                    <li class="navListItem"><a href="#">Services</a></li>
+                    <li class="navListItem"><a href="#">Projects</a></li>
+                </ul>
+            </nav> 
+            <div class="footerSocial">        
+                <a href="https://www.facebook.com" target="_blank"> <img src="src/images/desktop/footer/socialOpenMenu/icon-facebook.svg" alt="facebook" height="20"> </a>
+                <a href="https://www.instagram.com" target="_blank"><img src="src/images/desktop/footer/socialOpenMenu/icon-instagram.svg" alt="instagram" height="20"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="src/images/desktop/footer/socialOpenMenu/icon-twitter.svg" alt="twitter" height="20"></a>
+                <a href="https://www.pinterest.com" target="_blank"><img src="src/images/desktop/footer/socialOpenMenu/icon-pinterest.svg" alt="pinterest" height="20"></a>
+            </div>
+
+        </div>
+
+    </header>
+    <section class="firstScreen"> <!-- firstScreen Welcome-->
+        <h1 class="title">We are creatives</h1>
+        <img src="src/images/arrow.svg" alt="arrow" class="arrowImage">
+        <img src="src/images/desktop/image-header.jpg" alt="Orange on blue background" class="firstScreenBackground">
+    </section>
+
+    <section class="secondScreen"> <!-- secondScreen About Us -->
+        <div class="secondScreenTextContent">
+            <h2 class="titleSecondScreen">Transform your brand</h2>
+            <p class="textSecondScreen">We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>    
+            <a href="url" class="link"><span>learn more</span></a>
+        </div>
+        <img src="src/images/desktop/image-transform.jpg" alt="Egg on yellow background" class="secondScreenImageContent">
+    </section>
+    
+    <section class="thirdScreen"> <!-- thirdScreen About Us--> 
+        <div class="thirdScreenTextContent"> 
+            <h2 class="titleThirdScreen">Stand out to the right audience</h2>
+            <p class="textThirdScreen">Using a collaborative formula of designers, researchers, photographers, videographers and copywriters, we'll build and extend your brand in digital places.</p>
+            <a href="url" class="link linkPink">learn more</a>
+        </div>
+        <img src="src/images/desktop/image-stand-out.jpg" alt="Glass on rose background" class="thirdScreenImageContent">
+    </section>
+
+    <section class="fourthScreen"> <!-- fourthScreen Services -->
+        <div class="firstSide">
+            <img src="src/images/desktop/image-graphic-design.jpg" alt="Cherries on green background" class="thirdScreenImageContent">
+            <div class="firstSideTextContent">
+                <h3 class="titleFirstFourthScreen">Graphic design</h3>
+                <p class="textFirstFourthScreen">Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential client's attention.</p>
+            </div>
+        </div>
+        <div class="secondSide">
+            <img src="src/images/desktop/image-photography.jpg" alt="Cherries on green background" class="thirdScreenImageContent">
+            <div class="secondSideTextContent">
+                <h3 class="titleSecondFourthScreen">Photography</h3>
+                <p class="textSecondFourthScreen">Increase your credibility by getting the most stunning, high-quality photos that improve your business image.</p> 
+            </div>
+        </div>
+         </section>
+
+    <section class="testimonials"> <!-- fifthScreen Testimonials -->
+        <h4 class="titleFifthScreen">Client testimonials</h4>
+        <div class="reviews">
+            <div class="reviewBody">
+                <img src="src/images/desktop/testimonials/image-emily.jpg" alt="Pretty girl" class="clientPortrait">
+                <p class="reviewText">We put trust in Sunnyside and they delivered,making sure our needs were met and deadlines were always hit.</p>
+                <span class="clientName">Emily R.</span>
+                <span class="clientPosition">Marketimg director</span>
+            </div>
+            <div class="reviewBody">
+                <img src="src/images/desktop/testimonials/image-thomas.jpg" alt="Smiling man" class="clientPortrait">
+                <p class="reviewText">Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experince.</p>
+                <span class="clientName">Thomas S.</span>
+                <span class="clientPosition">Chief operating Officer</span>
+            </div>
+            <div class="reviewBody">
+                <img src="src/images/desktop/testimonials/image-jennie.jpg" alt="Smiling woman" class="clientPortrait">
+                <p class="reviewText">Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!</p>
+                <span class="clientName">Jennie F.</span>
+                <span class="clientPosition">Business owner</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery"> <!-- sixthScreen Gallery-->
+        <img src="src/images/desktop/gallery/image-gallery-milkbottles.jpg" alt="Bottles on blue background" class="galleryImage">
+        <img src="src/images/desktop/gallery/image-gallery-orange.jpg" alt="Orange on blue background" class="galleryImage">
+        <img src="src/images/desktop/gallery/image-gallery-cone.jpg" alt="Ice-creem on blue background" class="galleryImage">
+        <img src="src/images/desktop/gallery/image-gallery-sugarcubes.jpg" alt="Sugar on rose background" class="galleryImage">
+    </section>
+
+
+    <section class="footer"> <!-- Footer -->
+        <img src="/src/images/logoFooter.svg" alt="logo" height="30" class="footerLogo">
+        <nav class="footerNaviagation" role="navigation"> <!-- Меню -->
+            <ul class="footerNavList">
+                <li class="footerNavListItem"><a href="#">About </a></li>  
+                <li class="footerNavListItem"><a href="#">Services</a></li>
+                <li class="footerNavListItem"><a href="#">Projects</a></li>
+            </ul>
+        </nav> 
+        <div class="footerSocial">        
+            <a href="https://www.facebook.com" target="_blank"> <img src="src/images/desktop/footer/icon-facebook.svg" alt="facebook" height="20"> </a>
+            <a href="https://www.instagram.com" target="_blank"><img src="src/images/desktop/footer/icon-instagram.svg" alt="instagram" height="20"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="src/images/desktop/footer/icon-twitter.svg" alt="twitter" height="20"></a>
+            <a href="https://www.pinterest.com" target="_blank"><img src="src/images/desktop/footer/icon-pinterest.svg" alt="pinterest" height="20"></a>
+        </div>
+    </section>
+</body>
+</html>
