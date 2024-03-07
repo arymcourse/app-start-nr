@@ -14,7 +14,7 @@
         <!-- Scripts -->
     <script src="./src/task_10.js"></script>
 </head>
-<body>
+<body>  
     <header class="header">
         <img src="/src/images/logo.svg" class="logo" alt="logo">
         <nav class="navigation" role="navigation">
@@ -25,11 +25,11 @@
             </ul>
         </nav> 
         <button type="button" class="contactButton">CONTACT</button>
-        <img src="src/images/menu.png" alt="menuBurger" class="menuBurger" onclick="toggleMenu()">
+        <button class="toggleButton menuBurger" onclick="toggleMenu()"> <img src="src/images/menu.png" alt="menuBurger">  </button>
         <div class="mobileMenu" id="mobileMenu">
             <div class="headerOpenMenu">
                 <img src="/src/images/logoMenu.svg" class="logo" alt="logo">
-                <img src="src/images/close.png" alt="menuBurgerClose" class="menuBurgerClose" onclick="toggleMenu()">
+                <button class="toggleButton menuBurgerClose" onclick="toggleMenu()"> <img src="src/images/close.png" alt="menuBurgerClose" > </button>
             </div>
             <nav class="navigation" role="navigation">
                 <ul class="navList">
