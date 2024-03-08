@@ -1,0 +1,622 @@
+@import "maps";
+@import "mixins";
+@import "variables";
+
+body {
+    margin: 0;
+}
+
+.header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 30px 40px;
+    background-color: #3ebfff;
+    box-sizing: border-box;
+}
+
+.headerOpenMenu {
+    @media (max-width: 1024px) {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 30px 40px;
+        background-color: #ffffff;
+        box-sizing: border-box;
+    }
+}
+
+.menuBurgerClose {    
+    @media (max-width: 1024px) {
+        width: 26px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.toggleButton {
+    background: none;
+    border: none;
+}
+
+.menuBurger {
+    display: none;
+
+    @media (max-width: 1024px) {
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.mobileMenu {
+    display: none;
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #ffffff;
+        display: none;
+        z-index: 15;
+
+        &.openMenu {
+            display: block;
+        }
+
+        .navigation {
+            display: block;
+        }
+    }
+}
+
+/*Welcome*/
+
+.logo {
+    height: 35px;
+}
+
+.navigation {
+    margin-left: auto;
+    margin-right: 45px;
+
+    @media (max-width: 1024px) {
+        margin: 0;
+        padding: 20px;
+        display: none;
+    }
+
+}
+
+.navList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    column-gap: 45px;
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.navListItem {
+    cursor: pointer;
+    @include font(Barlow, 500, 16px, #ffffff);
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    @media (max-width: 1024px) {
+        font-weight: 600;
+        font-size: 32px;
+        color: #034b68;
+        padding: 20px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+}
+
+.contactButton {
+    cursor: pointer;
+    padding: 15px 25px;
+    border-radius: 25px;
+    border: none;
+    @include font(Fraunces, 700, 16px, #0d2149);
+    background: #fff;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.firstScreenBackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.firstScreen {
+    position: relative;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin-top: -110px;
+    padding-top: 110px;
+
+    @media (max-width: 1024px) {
+        max-height: 650px;
+    } 
+    
+} 
+
+.title {
+    @include font(Fraunces, 900, 112px, #ffffff);
+    text-transform: uppercase;
+    letter-spacing: 22px;
+    margin-top: 170px;
+    padding: 0 16px;
+
+    @media (max-width: 1024px) {
+        font-size: 44px;
+        text-align: center;
+        letter-spacing: 8px;
+        margin-top: 100px;
+    }
+}
+
+.arrowImage {
+    height: 125px;
+
+    @media (max-width: 1024px) {
+        height: 120px;
+    }
+}
+
+/*About Us*/
+
+.secondScreen {
+    display: flex;
+    align-items: stretch;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.secondScreenTextContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    background: $backgroundTextContentLight-color;
+    padding: 200px; 
+
+    @media (max-width: 1024px) {    
+        width: 100%;
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+.secondScreenImageContent {
+    width: 50%;
+    object-fit: cover;
+
+    @media (max-width: 1024px) {    
+        width: 100%;
+    }
+}
+
+.titleSecondScreen {
+    @include font(Fraunces, 700, 56px, #0d2149);
+    margin: 0 0 20px 0;
+
+    @media (max-width: 1024px) {    
+        font-size: 34px;
+        text-align: center;
+    }
+}
+
+.textSecondScreen {
+    @include font-paragraph;
+    margin: 0 0 30px 0;
+
+    @media (max-width: 1024px) {    
+        text-align: center;
+    }
+
+}
+
+.link {
+    width: fit-content;
+    @include font(Fraunces, 800, 16px, #0d2149);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+        &:before {
+            left: -15px;
+            width: calc(100% + 30px);
+        }
+    }
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -5px;
+        bottom: -3px;
+        width: calc(100% + 10px);
+        height: 10px;
+        border-radius: 5px;
+        background: #fed700;
+        opacity: .3;
+        transition: all $hoverTransitionTime;
+    }
+}
+
+.linkPink::before {
+    background: #fd7867;
+}
+
+/*About Us 2*/
+
+.thirdScreen {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+
+    @media (max-width: 1024px) {    
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+.thirdScreenTextContent {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 50%;
+    background: $backgroundTextContentLight-color;
+    padding: 200px;  
+
+    @media (max-width: 1024px) {    
+        width: 100%;
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.thirdScreenImageContent {
+    width: 100%;
+    object-fit: cover;
+
+    @media (max-width: 1024px) {    
+        width: 100%;
+        height: 630px;
+    }
+}
+
+.titleThirdScreen {
+    @include font(Fraunces, 700, 56px, #0d2149);
+    margin: 0 0 30px 0;
+
+    @media (max-width: 1024px) {    
+        font-size: 34px;
+        text-align: center;
+    }
+}
+
+.textThirdScreen {
+    @include font-paragraph;
+    margin: 0 0 20px 0;
+
+    @media (max-width: 1024px) {    
+        text-align: center;
+    }
+
+}
+
+/*Services*/
+
+.fourthScreen {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    @media (max-width: 1024px) {    
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.firstSide {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1024px) {    
+        width: 100%;
+    }
+}
+
+.secondSide {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1024px) {    
+        width: 100%;
+    }
+}
+
+.firstSideTextContent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 415px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 20px 120px;
+
+    @media (max-width: 1024px) {    
+        z-index: 1;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 415px;
+        padding: 0 50px 90px;
+        position: absolute;
+        bottom: 0px;
+    }
+
+}
+
+.secondSideTextContent {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 415px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 20px 120px;
+
+    @media (max-width: 1024px) {    
+        z-index: 1;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 415px;
+        padding: 0 50px 90px;
+        position: absolute;
+        bottom: 0px;
+    }
+}
+
+.titleFirstFourthScreen {
+    @include font(Fraunces, 700, 36px, #19564a);
+    text-align: center;
+    margin: 0 0 20px 0;
+
+    @media (max-width: 1024px) {    
+        font-size: 30px;
+    }
+}
+
+.textFirstFourthScreen {
+    @include font(Barlow, 500, 18px, #19564a);
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+.titleSecondFourthScreen {
+    @include font(Fraunces, 700, 36px, #034b68);
+    text-align: center;
+    margin: 0 0 20px 0;
+
+    @media (max-width: 1024px) {    
+        font-size: 30px;
+    }
+}
+
+.textSecondFourthScreen {
+    @include font(Barlow, 500, 18px, #034b68);
+    line-height: 28px;
+    text-align: center;
+    margin: 0;
+}
+
+/*Testimonials*/
+
+.reviews {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    column-gap: 170px;
+
+    @media (max-width: 1024px) {    
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.reviewBody {
+    max-width: 360px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 1024px) {    
+        margin-bottom: 60px;
+    }
+}
+
+.testimonials { 
+    padding: 220px;
+    background: $backgroundTextContentLight-color;
+
+    @media (max-width: 1024px) {    
+        padding: 100px 20px 100px 20px;
+    }
+}
+
+.titleFifthScreen {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 140px 0;
+    @include font(Fraunces, 700, 30px, #a9a9a9);
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    
+    @media (max-width: 1024px) {    
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+}
+
+.clientPortrait {
+    border-radius: 80px;
+    width: 80px;
+    height: 80px;
+    margin: 0 0 30px 0;
+}
+
+.reviewText {
+    @include font-paragraph;
+    line-height: 28px;
+    text-align: center;
+    margin: 0 0 60px 0;
+
+    @media (max-width: 1024px) {    
+        margin: 0 0 20px;
+    }
+    
+}
+
+.clientName {
+    @include font(Fraunces, 700, 20px, #0d2149);
+    text-align: center;
+    margin: 0 0 5px 0;
+}
+
+.clientPosition {
+    @include font(Barlow, 500, 18px, #686868);
+    line-height: 28px;
+    text-align: center
+}
+
+/*Gallery*/
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+
+    @media (max-width: 1024px) {    
+        flex-wrap: wrap;
+    }
+}
+
+.galleryImage {
+    width: 25%;
+    @media (max-width: 1024px) {    
+        width: 50%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+}
+
+/*Footer*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px;
+
+    @media (max-width: 1024px) {        
+        padding: 50px 20px 50 20px;
+    }
+
+    }
+
+.footerNavList {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    column-gap: 80px;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    @media (max-width: 1024px) {        
+        column-gap: 15px;
+    }
+}
+
+.footerSocial {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    column-gap: 30px;
+    padding: 30px;
+}
+
+.footer {
+    background: #90d4c5;
+}
+
+.footerLogo {
+    height: 40px;
+    padding: 30px;
+}
+
+.footerNavListItem {
+    cursor: pointer;
+    @include font(Barlow, 600, 18px, #2b7463);
+    padding: 30px;
+}   
