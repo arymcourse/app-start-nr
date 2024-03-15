@@ -1,27 +1,34 @@
-@mixin font( $family: null, $weight: null, $size: null, $color: null) {
-    font-family: Fraunces;
-    font-weight: 700;
-    font-size: 56px;
-    color: #0d2149;
+@mixin font($family: null, $weight: null, $size: null, $color: null) {
+  font-family: Fraunces;
+  font-weight: 700;
+  font-size: 56px;
+  color: #0d2149;
 
-    @if $family != null {
-        font-family: $family;
-    }
-    @if $weight != null {
-        font-weight: $weight;
-    }
-    @if $size != null {
-        font-size: $size;
-    }
-    @if $color != null {
-        color: $color;
-    }
+  @if $family != null {
+    font-family: $family;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+  @if $size != null {
+    font-size: $size;
+  }
+  @if $color != null {
+    color: $color;
+  }
 }
 
-@mixin font-paragraph(){
-    color: #848c9b;
-    font-family: Barlow;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 28px;
+@mixin font-paragraph() {
+  color: #848c9b;
+  font-family: Barlow;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+@mixin map-to-styles($map, $key) {
+  $styles: map-get($map, $key);
+  @each $property, $value in $styles {
+    #{$property}: $value;
+  }
 }
